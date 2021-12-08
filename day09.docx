@@ -67,12 +67,50 @@ var countries = [
 a.	Get all the countries from Asia continent /region using Filter function
 
     let result = countries.filter((x) => x.region === "Asia")
-    console.log(result)
+    console.log(result);
+    
+    Output:
+    [ { name: 'Afghanistan',
+    capital: 'Kabul',
+    region: 'Asia',
+    subregion: 'Southern Asia',
+    currency: 'Afghan afghani',
+    population: 389787,
+    flag: 'https://www.britannica.com/topic/flag-of-Afghanistan' },
+  { name: 'Japan',
+    capital: 'Tokyo',
+    region: 'Asia',
+    subregion: 'Eastern Asia',
+    currency: 'Japanese yen',
+    population: 122330,
+    flag: 'https://en.wikipedia.org/wiki/File:Flag_of_Japan.svg' },
+  { name: 'China',
+    capital: 'Beijing',
+    region: 'Asia',
+    subregion: 'Eastern Asia',
+    currency: 'Renminbi',
+    population: 1402781,
+    flag: 'https://www.britannica.com/topic/flag-of-China' } ]
 
 b.	Get all the countries with a population of less than 2 lakhs using Filter function
 
     let result = countries.filter((x) => x.population < 200000)
-    console.log(result)
+    console.log(result);
+    Output:
+    [ { name: 'Japan',
+    capital: 'Tokyo',
+    region: 'Asia',
+    subregion: 'Eastern Asia',
+    currency: 'Japanese yen',
+    population: 122330,
+    flag: 'https://en.wikipedia.org/wiki/File:Flag_of_Japan.svg' },
+  { name: 'United States of America',
+    capital: 'Washington,D.C.',
+    region: 'Americas',
+    subregion: 'Northern America',
+    currency: 'US Dollar',
+    population: 125350,
+    flag: 'https://www.britannica.com/topic/flag-of-the-United-States-of-America' } ]
     
 c.	Print the following details name, capital, flag using forEach function.
 
@@ -82,16 +120,48 @@ c.	Print the following details name, capital, flag using forEach function.
     });
      console.log(employeeid);
      
+     Output:
+[ 'Afghanistan',
+  'Kabul',
+  'https://www.britannica.com/topic/flag-of-Afghanistan',
+  'India',
+  'New Delhi',
+  'https://en.wikipedia.org/wiki/File:Flag_of_India.svg',
+  'Japan',
+  'Tokyo',
+  'https://en.wikipedia.org/wiki/File:Flag_of_Japan.svg',
+  'China',
+  'Beijing',
+  'https://www.britannica.com/topic/flag-of-China',
+  'United States of America',
+  'Washington,D.C.',
+  'https://www.britannica.com/topic/flag-of-the-United-States-of-America',
+  'France',
+  'Paris',
+  'https://upload.wikimedia.org/wikipedia/en/c/c3/Flag_of_France.svg' ]
+     
+     
 d.	Print the total population of countries using reduce function.
     
     let TotalExperirence = countries.reduce((prev, curr) => {
       return prev + curr.population;
-    }, 0);
-
+    },0);
  console.log(TotalExperirence);
+ 
+ Output:
+   22216136
 e.	Print the country which uses US Dollars as currency.
 
     let result = countries.filter((x) => x.currency === "US Dollar")
-    console.log(result)
+    console.log(result):
+    
+    Output:
+[ { name: 'United States of America',
+    capital: 'Washington,D.C.',
+    region: 'Americas',
+    subregion: 'Northern America',
+    currency: 'US Dollar',
+    population: 125350,
+    flag: 'https://www.britannica.com/topic/flag-of-the-United-States-of-America' } ]
 
 
